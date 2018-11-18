@@ -23,3 +23,7 @@ This program renders the Hosek-Wilkie Sky Model in high-dynamic range to XYZ tri
 >>> make
 >>> ./ahPhysicalSky
 ```
+
+# TODO
+* Add solar disc rendering
+* Add aerial perspective
