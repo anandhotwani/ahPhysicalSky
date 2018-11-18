@@ -16,8 +16,8 @@ endif()
 set(SOURCE_FILES
     src/Main.cpp
     src/Renderer.cpp
-	src/SkyModel.cpp
-	HosekSky/ArHosekSkyModel.cpp
+    src/SkyModel.cpp
+    HosekSky/ArHosekSkyModel.cpp
 )
 
 add_executable(ahPhysicalSky ${SOURCE_FILES})
