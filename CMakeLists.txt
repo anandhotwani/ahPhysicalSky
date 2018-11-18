@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.4)
 project(ahPhysicalSky)
 
 if(NOT "${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wno-narrowing -march=native -m64 -O3 -static -funroll-loops")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu11 -Wno-narrowing -march=native -m64 -O3 -static -funroll-loops")
 endif()
 
 FIND_PACKAGE( OpenMP REQUIRED)
