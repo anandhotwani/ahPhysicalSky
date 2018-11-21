@@ -19,29 +19,32 @@ inline float Mix(float x, float y, float s) { return x + (y - x) * s; }
 
 inline Vector3f XYZ_to_ACES2065_1(Vector3f color)
 {
-	color.x = color.x * 1.0498110175f + color.y * 0.0000000000f + color.z * -0.0000974845f;
-	color.y = color.x * -0.4959030231f + color.y * 1.3733130458f + color.z * 0.0982400361f;
-	color.z = color.x * 0.0000000000f + color.y * 0.0000000000f + color.z *  0.9912520182f;
+	Vector3f out = Vector3f(0);
+	out.x = color.x * 1.0498110175f + color.y * 0.0000000000f + color.z * -0.0000974845f;
+	out.y = color.x * -0.4959030231f + color.y * 1.3733130458f + color.z * 0.0982400361f;
+	out.z = color.x * 0.0000000000f + color.y * 0.0000000000f + color.z *  0.9912520182f;
 
-	return color;
+	return out;
 }
 
 inline Vector3f ACES2065_1_to_ACEScg(Vector3f color)
 {
-	color.x = color.x * 1.4514393161f + color.y * -0.2365107469f + color.z * -0.2149285693f;
-	color.y = color.x * -0.0765537733f + color.y * 1.1762296998f + color.z * -0.0996759265f;
-	color.z = color.x * 0.0083161484f + color.y * -0.0060324498f + color.z *  0.9977163014f;
+	Vector3f out = Vector3f(0);
+	out.x = color.x * 1.4514393161f + color.y * -0.2365107469f + color.z * -0.2149285693f;
+	out.y = color.x * -0.0765537733f + color.y * 1.1762296998f + color.z * -0.0996759265f;
+	out.z = color.x * 0.0083161484f + color.y * -0.0060324498f + color.z *  0.9977163014f;
 
-	return color;
+	return out;
 }
 
 inline Vector3f ACES2065_1_to_sRGB(Vector3f color)
 {
-	color.x = color.x * 2.5216494298f + color.y * -1.1368885542f + color.z * -0.3849175932f;
-	color.y = color.x * -0.2752135512f + color.y * 1.3697051510f + color.z * -0.0943924508f;
-	color.z = color.x * -0.0159250101f + color.y * -0.1478063681f + color.z * 1.1638058159f;
+	Vector3f out = Vector3f(0);	
+	out.x = color.x * 2.5216494298f + color.y * -1.1368885542f + color.z * -0.3849175932f;
+	out.y = color.x * -0.2752135512f + color.y * 1.3697051510f + color.z * -0.0943924508f;
+	out.z = color.x * -0.0159250101f + color.y * -0.1478063681f + color.z * 1.1638058159f;
 
-	return color;
+	return out;
 
 }
 
